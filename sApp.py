@@ -3,6 +3,8 @@ from datetime import date
 from PyQt4 import QtGui
 
 
+
+
 # ---------------------------Starting Variables-----------------------------
 arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
@@ -93,5 +95,3 @@ print "(3). You have been sober for %s nights. This equals roughly %s months or 
       % (totalNightsSober, monthsFromLastDrink, yearsFromLastDrink)
 print ("")
 raw_input = "press end"
-
-
