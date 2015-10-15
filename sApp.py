@@ -46,7 +46,7 @@ class TimeFromApp(QtGui.QWidget):
 
             return relapses
 
-        self.button.clicked.connect(self.handle(self))
+        #self.button.clicked.connect(self.handle)
 
 if __name__ == '__main__':
     import sys
@@ -73,7 +73,7 @@ daysFromLastDrink = (date.today() - sobriety).days
 daysFromConviction = (date.today() - conviction).days
 monthsFromLastDrink = daysFromLastDrink / 30.0
 yearsFromLastDrink = daysFromLastDrink / 365.0
-totalNightsSober = (daysFromLastDrink - check_relapse_number(relapses))
+totalNightsSober = (daysFromLastDrink - relapses)
 # Calculated from Date of Conviction
 monthsFromConviction = daysFromConviction / 30
 
