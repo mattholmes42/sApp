@@ -1,9 +1,6 @@
 #!python
 from datetime import date
 from PyQt4 import QtGui
-# I amy want to use tKinter instead
-# or see what I can do with flask
-# One more line
 
 
 # ---------------------------Starting Variables-----------------------------
