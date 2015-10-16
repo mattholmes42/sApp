@@ -10,7 +10,7 @@ arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
 relapses = 0
-
+# Added Comment
 
 # --------------------------Set Up GUI Environment--------------------------------------
 class TimeFromApp(QtGui.QWidget):
