@@ -1,8 +1,6 @@
 #!python
 from datetime import date
-from PyQt4 import QtGui
-
-
+import easygui
 
 
 # ---------------------------Starting Variables-----------------------------
@@ -13,18 +11,6 @@ relapses = 0
 # Added Comment
 
 # --------------------------Set Up GUI Environment--------------------------------------
-class TimeFromApp(QtGui.QWidget):
-    def __init__(self, parent=None):
-        super(TimeFromApp, self).__init__(parent)
-
-        self.button = QtGui.QPushButton('Yes', self)
-
-        mainLayout = QtGui.QGridLayout()
-        mainLayout.addWidget(self.button, 0, 0)
-
-        self.setLayout(mainLayout)
-        self.setWindowTitle("Sobriety App")
-
         def check_relapse_number(var):
             global relapses
             while relapses == 0:
@@ -50,16 +36,6 @@ class TimeFromApp(QtGui.QWidget):
 
 if __name__ == '__main__':
     import sys
-
-    app = QtGui.QApplication(sys.argv)
-
-    soberWidget = TimeFromApp()
-    soberWidget.show()
-
-# -------------------------Determine if the relapse count has stayed the same---------------
-
-
-    sys.exit(app.exec_())
 
 
 # -------------------------Calculated Variables--------------------------------
