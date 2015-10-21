@@ -8,7 +8,7 @@ arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
 relapses = 0
-# Added Comment
+
 
 # --------------------------Set Up GUI Environment--------------------------------------
         def check_relapse_number(var):
@@ -31,11 +31,6 @@ relapses = 0
                       relapses = relapse_count
 
             return relapses
-
-        #self.button.clicked.connect(self.handle)
-
-if __name__ == '__main__':
-    import sys
 
 
 # -------------------------Calculated Variables--------------------------------
