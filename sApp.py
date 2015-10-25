@@ -2,35 +2,41 @@
 from datetime import date
 import easygui
 
-
 # ---------------------------Starting Variables-----------------------------
 arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
 relapses = 0
 
+def determine_relapse_number():
+    global relapses
+    read_file = open('relapse_data.txt', 'r')
+    write_file = open('relapse_data.txt', 'w')
 
-# --------------------------Set Up GUI Environment--------------------------------------
-        def check_relapse_number(var):
-            global relapses
-            while relapses == 0:
-                  try:
-                      relapse_count = raw_input("Have you had any more relapses since the last time you used this app? Y or N ")
-                      if relapse_count == "N" or relapse_count == "n":
-                          relapse_count = 4
-                      elif relapse_count != "N" or relapse_count != "n":
-                          relapse_count = int(raw_input("Enter number of total times relapsed: "))
-                          if not relapse_count >= 1:
-                              raise ValueError()
-                  except ValueError:
-                      print('')
-                      print('Error: Invalid Option, a number value above zero is required. Program now restarting...')
-                      print('')
-                      relapses = 0
-                  else:
-                      relapses = relapse_count
+    while relapses == 0:
+        try:
+            relapse_count = raw_input("Have you had any more relapses since the last time you used this app? Y or N ")
+            if relapse_count == "N" or relapse_count == "n":
+                #read_file.read()
+                #read_file.close()
+                relapses =  4
+            elif relapse_count != "N" or relapse_count != "n":
+                relapse_count = int(raw_input("Enter number of total times relapsed: "))
+                #relapse_write = open('relapse_data.txt', 'w')
+                #relapse_write.write(relapse_count)
+                #relapse_write.close()
+                relapses = relapse_count
+                if not relapse_count >= 1:
+                    raise ValueError()
+        except ValueError:
+            print('')
+            print('Error: Invalid Option, a number value above zero is required. Program now restarting...')
+            print('')
+            relapses = 0
 
-            return relapses
+    return relapses
+
+times_relapsed = determine_relapse_number()
 
 
 # -------------------------Calculated Variables--------------------------------
@@ -44,9 +50,11 @@ daysFromLastDrink = (date.today() - sobriety).days
 daysFromConviction = (date.today() - conviction).days
 monthsFromLastDrink = daysFromLastDrink / 30.0
 yearsFromLastDrink = daysFromLastDrink / 365.0
-totalNightsSober = (daysFromLastDrink - relapses)
+totalNightsSober = (daysFromLastDrink - times_relapsed)
+
 # Calculated from Date of Conviction
 monthsFromConviction = daysFromConviction / 30
+
 
 
 # ----------------------------------Outputs--------------------------------
