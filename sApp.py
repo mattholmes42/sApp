@@ -1,30 +1,32 @@
 #!python
 from datetime import date
-import easygui
 
 # ---------------------------Starting Variables-----------------------------
 arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
 relapses = 0
+read_file = open('relapse_data.txt', 'r')
+write_file = open('relapse_data.txt', 'w')
 
 def determine_relapse_number():
     global relapses
-    read_file = open('relapse_data.txt', 'r')
-    write_file = open('relapse_data.txt', 'w')
+    global read_file
+    global write_file
 
     while relapses == 0:
         try:
             relapse_count = raw_input("Have you had any more relapses since the last time you used this app? Y or N ")
             if relapse_count == "N" or relapse_count == "n":
-                #read_file.read()
-                #read_file.close()
-                relapses =  4
+                relapse_count = 4
+
+                relapses = relapse_count
+
             elif relapse_count != "N" or relapse_count != "n":
                 relapse_count = int(raw_input("Enter number of total times relapsed: "))
-                #relapse_write = open('relapse_data.txt', 'w')
-                #relapse_write.write(relapse_count)
-                #relapse_write.close()
+                write_file
+                write_file.write('%d' % relapse_count)
+                write_file.close()
                 relapses = relapse_count
                 if not relapse_count >= 1:
                     raise ValueError()
@@ -35,6 +37,7 @@ def determine_relapse_number():
             relapses = 0
 
     return relapses
+
 
 times_relapsed = determine_relapse_number()
 
@@ -70,7 +73,7 @@ print "(1). You were arrested %s months ago." % monthsFromArrest
 print ("")
 print "(2). It has been %s months since you were convicted." % monthsFromConviction
 print ("")
-print "(3). You have been sober for %s nights. This equals roughly %s months or %f years of total sobriety." \
+print "(3). You have been sober for %s nights. This equals, roughly, \n%s months or %f years of total sobriety." \
       % (totalNightsSober, monthsFromLastDrink, yearsFromLastDrink)
 print ("")
 raw_input = "press end"
