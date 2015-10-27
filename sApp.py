@@ -8,7 +8,7 @@ sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
 
 
-# -----Finds out if the user has relapsed since last use of this app---------------
+# -----Prompts user for relapse update---------------
 def determine_relapse_number():
     count = 0
 
@@ -42,8 +42,7 @@ def determine_relapse_number():
 
 
 # -------------------------Calculated Variables--------------------------------
-# Sets variable for number of times the user has relapsed
-times_relapsed = determine_relapse_number()
+times_relapsed = determine_relapse_number() # Sets variable for number of times the user has relapsed
 
 # Calculated From Date of Arrest
 timeFromArrest = (date.today() - arrest).days
@@ -60,7 +59,7 @@ totalNightsSober = (daysFromLastDrink - times_relapsed)
 monthsFromConviction = daysFromConviction / 30
 
 
-# ----------------------------------Output to display to user--------------------------------
+# ----------------------------------Output displayed to user--------------------------------
 def data_outputs():
     print ("------------------------------")
     print "Today's date is:", date.today()
