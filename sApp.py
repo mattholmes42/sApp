@@ -6,44 +6,39 @@ from datetime import date
 arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
 conviction = date(2012, 6, 25)
-relapses = 0
-read_file = open('relapse_data.txt', 'r')
-write_file = open('relapse_data.txt', 'w')
 
 
 # -----Finds out if the user has relapsed since last use of this app---------------
 def determine_relapse_number():
-    global relapses
-    global read_file
-    global write_file
+    count = 0
 
-    while relapses == 0:
-        relapse_count = 0
+    def no_change():
+        with open('relapse_data.txt', 'r') as read_file:
+            relapses = int(read_file.readline())
+            return relapses
+
+    def has_changed():
+        with open('relapse_data.txt', 'w') as write_file:
+            get_new_count = int(raw_input("Enter number of total times relapsed: "))
+            write_file.write('%d' % get_new_count)
+            return get_new_count
+
+    while count == 0:
         try:
             has_count_changed = raw_input("Have you had any more relapses since the last time you used this app? Y or N ")
             if has_count_changed == "N" or has_count_changed == "n":
-                relapse_count = read_file
-                relapse_count
-                read_file.read()
-                read_file.close()
-
-                relapses = relapse_count
-
-            elif has_count_changed != "N" or relapse_count != "n":
-                relapse_count = int(raw_input("Enter number of total times relapsed: "))
-                write_file
-                write_file.write('%d' % relapse_count)
-                write_file.close()
-                relapses = relapse_count
-                if not relapse_count >= 1:
+                count = no_change()
+            elif has_count_changed != "N" or has_count_changed != "n":
+                count = has_changed()
+                if not count >= 1:
                     raise ValueError()
         except ValueError:
             print('')
             print('Error: Invalid Option, a number value above zero is required. Program now restarting...')
             print('')
-            relapses = 0
+            count = 0
 
-    return relapses
+    return count
 
 
 # -------------------------Calculated Variables--------------------------------
