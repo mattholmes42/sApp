@@ -72,7 +72,7 @@ def data_outputs():
     print ("")
     print "(2). It has been %s months since you were convicted." % monthsFromConviction
     print ("")
-    print "(3). You have been sober for %s nights. This equals, roughly, \n%s months or %f years of total sobriety." \
+    print "(3). You have been sober for %s nights. This is roughly \n%s months or %f years of total sobriety." \
       % (totalNightsSober, monthsFromLastDrink, yearsFromLastDrink)
     print ("")
 
