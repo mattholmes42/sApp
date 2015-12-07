@@ -2,6 +2,8 @@
 from datetime import date
 
 
+
+
 # ---------------------------Starting Variables-----------------------------
 arrest = date(2011, 11, 20)
 sobriety = date(2012, 4, 16)
@@ -76,6 +78,15 @@ def data_outputs():
       % (totalNightsSober, monthsFromLastDrink, yearsFromLastDrink)
     print ("")
 
+#---------------------------------Output in secondary form----------------------------------
+    print ("-----------------------------------------------------------")
+    print ("(1). Months since arrest: %s" % monthsFromArrest)
+    print ("(2). Months since conviction: %s" % monthsFromConviction)
+    print ("(3). Nights sober: %s" % totalNightsSober)
+    print ("(4). Months sober: %s" %monthsFromLastDrink)
+    print ("(5). Years sober: %s" % yearsFromLastDrink)
+    print ("-----------------------------------------------------------")
+    print ("")
 
 data_outputs()
 
