@@ -70,13 +70,6 @@ def data_outputs():
     print "Sobriety started:", sobriety
     print ("------------------------------")
     print ""
-    print "(1). You were arrested %s months ago." % monthsFromArrest
-    print ("")
-    print "(2). It has been %s months since you were convicted." % monthsFromConviction
-    print ("")
-    print "(3). You have been sober for %s nights. This is roughly \n%s months or %f years of total sobriety." \
-      % (totalNightsSober, monthsFromLastDrink, yearsFromLastDrink)
-    print ("")
 
 #---------------------------------Output in secondary form----------------------------------
     print ("-----------------------------------------------------------")
