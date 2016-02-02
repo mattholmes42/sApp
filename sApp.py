@@ -70,7 +70,6 @@ def data_outputs():
     print "Sobriety started:", sobriety
     print ("------------------------------")
     print ""
-
 #---------------------------------Output in secondary form----------------------------------
     print ("-----------------------------------------------------------")
     print ("(1). Months since arrest: %s" % monthsFromArrest)
