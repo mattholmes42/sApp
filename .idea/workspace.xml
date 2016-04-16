@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffdfd13c-af65-47ef-a86e-507aafb3ed5f" name="Default" comment="Creating new setup (This should be written for python3)">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sApp.py" afterPath="$PROJECT_DIR$/sApp.py" />
+    <list default="true" id="ffdfd13c-af65-47ef-a86e-507aafb3ed5f" name="Default" comment="Changed code to python3">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sApp.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="sApp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sApp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.95412844">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.82568806">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
                 <element signature="e#10#35#0" expanded="true" />
               </folding>
@@ -70,8 +69,8 @@
         <option value="$USER_HOME$/Desktop/test.py" />
         <option value="$PROJECT_DIR$/easyGuiSapp.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch" />
-        <option value="$PROJECT_DIR$/relapse_data.txt" />
         <option value="$PROJECT_DIR$/sApp.py" />
+        <option value="$PROJECT_DIR$/relapse_data.txt" />
       </list>
     </option>
   </component>
@@ -94,7 +93,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -105,7 +104,20 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
@@ -114,6 +126,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.ide.scratch.NewScratchFileAction" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SaPPy3" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RunManager" selected="Python.sApp">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -261,9 +274,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="/usr/local/Cellar/python3/3.4.3_2/Frameworks/Python.framework/Versions/3.4/bin/python3.4" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sApp" />
@@ -312,7 +325,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460846607288</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changed code to python3">
+      <created>1460847188407</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1460847188407</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -333,7 +352,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.109531336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.109531336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39798206" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32694355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23370786" sideWeight="0.49481866" order="2" side_tool="false" content_ui="tabs" />
@@ -385,7 +404,8 @@
     <MESSAGE value="Test commit" />
     <MESSAGE value="Added Comment on line 13" />
     <MESSAGE value="Creating new setup (This should be written for python3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating new setup (This should be written for python3)" />
+    <MESSAGE value="Changed code to python3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed code to python3" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -813,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sApp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95412844">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.82568806">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="e#10#35#0" expanded="true" />
           </folding>
