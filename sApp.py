@@ -1,7 +1,7 @@
 #!python
+
+from __future__ import absolute_import
 from datetime import date
-
-
 
 
 # ---------------------------Starting Variables-----------------------------
@@ -21,13 +21,13 @@ def determine_relapse_number():
 
     def has_changed():
         with open('relapse_data.txt', 'w') as write_file:
-            get_new_count = int(raw_input("Enter number of total times relapsed: "))
+            get_new_count = int(input('Enter number of total times relapsed: '))
             write_file.write('%d' % get_new_count)
             return get_new_count
 
     while count == 0:
         try:
-            has_count_changed = raw_input("Have you had any more relapses since the last time you used this app? Y or N ")
+            has_count_changed = raw_input('Have you had any more relapses since the last time you used this app? Y or N ')
             if has_count_changed == "N" or has_count_changed == "n":
                 count = no_change()
             elif has_count_changed != "N" or has_count_changed != "n":
@@ -44,7 +44,7 @@ def determine_relapse_number():
 
 
 # -------------------------Calculated Variables--------------------------------
-times_relapsed = determine_relapse_number() # Sets variable for number of times the user has relapsed
+times_relapsed = determine_relapse_number()  # Sets variable for number of times the user has relapsed
 
 # Calculated From Date of Arrest
 timeFromArrest = (date.today() - arrest).days
@@ -63,26 +63,27 @@ monthsFromConviction = daysFromConviction / 30
 
 # ----------------------------------Output displayed to user--------------------------------
 def data_outputs():
-    print ("------------------------------")
-    print "Today's date is:", date.today()
-    print "Arrested:", arrest
-    print "Convicted:", conviction
-    print "Sobriety started:", sobriety
-    print ("------------------------------")
-    print ""
-#---------------------------------Output in secondary form----------------------------------
-    print ("---------------------------------------------")
-    print ("(1). %s            | months since arrest." % monthsFromArrest)
-    print ("---------------------------------------------")
-    print ("(2). %s            | months since conviction." % monthsFromConviction)
-    print ("---------------------------------------------")
-    print ("(3). %s          | nights sober." % totalNightsSober)
-    print ("---------------------------------------------")
-    print ("(4). %s | months sober." %monthsFromLastDrink)
-    print ("---------------------------------------------")
-    print ("(5). %s | years sober." % yearsFromLastDrink)
-    print ("---------------------------------------------")
-    print ("")
+    print ('------------------------------')
+    print ("Today's date is:", date.today())
+    print ('Arrested:', arrest)
+    print ('Convicted:', conviction)
+    print ('Sobriety started:', sobriety)
+    print ('------------------------------')
+    print ('')
+    # ---------------------------------Output in secondary form----------------------------------
+    print ('---------------------------------------------')
+    print ('(1). %s            | months since arrest.' % monthsFromArrest)
+    print ('---------------------------------------------')
+    print ('(2). %s            | months since conviction.' % monthsFromConviction)
+    print ('---------------------------------------------')
+    print ('(3). %s          | nights sober.' % totalNightsSober)
+    print ('---------------------------------------------')
+    print ('(4). %s | months sober.' % monthsFromLastDrink)
+    print ('---------------------------------------------')
+    print ('(5). %s | years sober.' % yearsFromLastDrink)
+    print ('---------------------------------------------')
+    print ('')
+
 
 data_outputs()
 
