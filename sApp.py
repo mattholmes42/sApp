@@ -13,7 +13,7 @@ conviction = date(2012, 6, 25)
 # -----Prompts user for relapse update---------------
 def determine_relapse_number():
 
-    get_info = input("Have you relapsed?: ")
+    get_info = input("Have you relapsed?(INPUT: Y/N or y/n then press ENTER/RETURN):  ")
 
     def no_change():
         with open('relapse_data.txt', 'r') as read_file:
@@ -67,17 +67,17 @@ def data_outputs():
     print('------------------------------')
     print('')
     # ---------------------------------Output in secondary form----------------------------------
-    print('---------------------------------------------')
-    print('(1). %s            | months since arrest.' % monthsFromArrest)
-    print('---------------------------------------------')
-    print('(2). %s            | months since conviction.' % monthsFromConviction)
-    print('---------------------------------------------')
-    print('(3). %s          | nights sober.' % totalNightsSober)
-    print('---------------------------------------------')
-    print('(4). %s | months sober.' % monthsFromLastDrink)
-    print('---------------------------------------------')
-    print('(5). %s | years sober.' % yearsFromLastDrink)
-    print('---------------------------------------------')
+    print('----------------------------------------------------------------------------------')
+    print('(1). %s           |  months since arrest.' % monthsFromArrest)
+    print('---------------------------------|------------------------------------------------')
+    print('(2). %s          |  months since conviction.' % monthsFromConviction)
+    print('---------------------------------|------------------------------------------------')
+    print('(3). %s                        |  nights sober.' % totalNightsSober)
+    print('---------------------------------|------------------------------------------------')
+    print('(4). %s                        |  months sober.' % monthsFromLastDrink)
+    print('---------------------------------|------------------------------------------------')
+    print('(5). %s           |  years sober.' % yearsFromLastDrink)
+    print('----------------------------------------------------------------------------------')
     print('')
     print("pi =", math.pi)
 
