@@ -27,10 +27,11 @@ def determine_relapse_number():
             return count
 
     def relapse_number():
-        if get_info == 'Y' or get_info == 'y':
-            count = has_changed()
-            if count >= 1:
-                return count
+        if get_info != 'n' or get_info != 'n':
+            if get_info == 'Y' or get_info == 'y':
+                count = has_changed()
+                if count >= 1:
+                    return count
             else:
                 raise ValueError("Sorry Charlie! Try again.")
         else:
